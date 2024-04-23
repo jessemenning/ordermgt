@@ -22,7 +22,7 @@ output application/java
     <set-variable doc:name="Dynamic Topic Parameter: regionId" doc:id="566d2c5d-ec27-40b8-b969-1d79479f16c7" variableName="regionId" value=""/>
     <set-variable doc:name="Dynamic Topic Parameter: orderId" doc:id="dd6570ed-8f3b-4c79-bb3d-a4a21f3d64c4" variableName="orderId" value=""/>
     <json:validate-schema doc:name="Validate JSON schemas" doc:id="ac6f2309-bad3-45e2-be75-0cffa5128604" schema="schemas\Order_JSON_0.1.0.json"/>
-    <solace:publish doc:name="Publish Order Updated Event" doc:id="38f2ec3a-8ea0-4f58-ae8e-1158a24cfb2f" address="acmeretail/onlineservices/order/updated/v1/$(vars.regionId as String)/$(vars.orderId as String)" config-ref="Solace_PubSub__Connector_Config">
+    <solace:publish doc:name="Publish Order Updated Events" doc:id="38f2ec3a-8ea0-4f58-ae8e-1158a24cfb2f" address="acmeretail/onlineservices/order/updated/v1/$(vars.regionId as String)/$(vars.orderId as String)" config-ref="Solace_PubSub__Connector_Config">
       <solace:message messageType="TEXT_MESSAGE"/>
     </solace:publish>
   </sub-flow>
