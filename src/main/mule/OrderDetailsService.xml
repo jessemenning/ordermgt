@@ -16,7 +16,7 @@ output application/java
 }]]></ee:set-payload>
       </ee:message>
     </ee:transform>
-    <flow-ref doc:name="Connect this to the correct egress flow" doc:id="a6344b2b-a714-4288-8cc2-32eef4ae7a50" name="BizLogic.ORDERDETAILS.ORDERCREATED.queue"/>
+    <flow-ref doc:name="Connect this to the correct egress flowss" doc:id="a6344b2b-a714-4288-8cc2-32eef4ae7a50" name="BizLogic.ORDERDETAILS.ORDERCREATED.queue"/>
   </sub-flow>
   <sub-flow doc:id="a31c395c-835d-44da-b99a-1424e035f13f" name="Egress.OrderUpdated.topic">
     <set-variable doc:name="Dynamic Topic Parameter: regionId" doc:id="566d2c5d-ec27-40b8-b969-1d79479f16c7" variableName="regionId" value=""/>
